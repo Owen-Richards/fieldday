@@ -1,0 +1,13 @@
+{
+  "name": "@fieldday/mobile",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "expo start --tunnel"
+  },
+  "dependencies": {
+    "expo": "^48.0.0",
+    "react": "18.2.0",
+    "react-native": "0.71.8"
+  }
+}

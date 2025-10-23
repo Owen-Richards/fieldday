@@ -1,0 +1,19 @@
+{
+  "name": "fieldday",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -w -r dev",
+    "build": "pnpm -w -r build",
+    "lint": "pnpm -w -r lint",
+    "test": "pnpm -w -r test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
