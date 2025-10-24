@@ -1,0 +1,47 @@
+{
+  "name": "@fieldday/monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Play anything, anywhere, with people you trust - Sports OS Platform unifying adult pickup, water sports partner-finding, youth logistics, and facility management through a trust-first Reliability/Skill/Conditions Graph",
+  "keywords": [
+    "sports",
+    "pickup-games",
+    "water-sports",
+    "youth-sports",
+    "facility-management",
+    "trust-first",
+    "reliability-scoring",
+    "conditions-aware",
+    "sports-os"
+  ],
+  "workspaces": [
+    "apps/mobile",
+    "apps/web/*",
+    "backend",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.0",
+    "turbo": "^1.11.0",
+    "prettier": "^3.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

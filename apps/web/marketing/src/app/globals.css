@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-neutral-200 dark:border-neutral-800;
+  }
+  body {
+    @apply bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50;
+  }
+}
+
+/* Custom scrollbar */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom select dropdown styling */
+@layer components {
+  /* Base select styling for consistent appearance */
+  select {
+    /* Ensure proper text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* CRITICAL: Style the dropdown menu itself with rounded corners */
+  /* Use !important to override inline classes */
+  select option {
+    padding: 0.75rem 1rem !important;
+    line-height: 1.4 !important;
+    background-color: transparent !important;
+    color: rgb(23, 23, 23) !important;
+    border-radius: 0.625rem !important;
+    margin: 0.25rem 0.5rem !important;
+    transition: all 0.12s ease-out !important;
+    font-size: 0.9375rem !important;
+    cursor: pointer !important;
+    font-weight: 400 !important;
+    /* Force rounded corners with multiple vendor prefixes */
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+  }
+
+  select option:hover,
+  select option:focus {
+    background-color: rgb(245, 245, 245) !important;
+    color: rgb(23, 23, 23) !important;
+    font-weight: 400 !important;
+    border-radius: 0.625rem !important;
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+  }
+
+  select option:checked,
+  select option[selected] {
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(37, 99, 235) 100%) !important;
+    border-radius: 0.625rem !important;
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+    color: white !important;
+    font-weight: 500 !important;
+  }
+
+  /* Dark mode with higher specificity */
+  .dark select option,
+  select option.dark\:bg-neutral-800 {
+    background-color: transparent !important;
+    color: rgb(245, 245, 245) !important;
+    border-radius: 0.625rem !important;
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+  }
+
+  .dark select option:hover,
+  .dark select option:focus {
+    background-color: rgb(63, 63, 63) !important;
+    color: rgb(250, 250, 250) !important;
+    font-weight: 400 !important;
+    border-radius: 0.625rem !important;
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+  }
+
+  .dark select option:checked,
+  .dark select option[selected] {
+    background: linear-gradient(135deg, rgb(59, 130, 246) 0%, rgb(37, 99, 235) 100%) !important;
+    border-radius: 0.625rem !important;
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+    color: white !important;
+    font-weight: 500 !important;
+  }
+
+  /* Webkit browsers (Chrome, Safari, Edge) - Round the dropdown container */
+  @supports (-webkit-appearance: none) {
+    select {
+      /* Force rounded dropdown menu with clean background */
+      background-image: none;
+    }
+
+    select option {
+      padding: 0.75rem 1rem !important;
+      border-radius: 0.625rem !important;
+      -webkit-border-radius: 0.625rem !important;
+      margin: 0.25rem 0.5rem !important;
+      min-height: 2.5rem !important;
+    }
+
+    /* Style the first and last options for extra clean edges */
+    select option:first-child {
+      margin-top: 0.5rem !important;
+      border-top-left-radius: 0.625rem !important;
+      border-top-right-radius: 0.625rem !important;
+    }
+
+    select option:last-child {
+      margin-bottom: 0.5rem !important;
+      border-bottom-left-radius: 0.625rem !important;
+      border-bottom-right-radius: 0.625rem !important;
+    }
+  }
+
+  /* Firefox specific - maximum possible rounding */
+  @-moz-document url-prefix() {
+    select {
+      scrollbar-width: thin;
+      scrollbar-color: rgb(203, 213, 225) rgb(248, 250, 252);
+    }
+
+    select option {
+      padding: 0.75rem 1rem !important;
+      border-radius: 0.625rem !important;
+      -moz-border-radius: 0.625rem !important;
+      margin: 0.25rem 0.5rem !important;
+    }
+  }
+
+  /* Custom scrollbar for select dropdowns with clean modern design */
+  select::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  select::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 0.5rem 0;
+  }
+
+  select::-webkit-scrollbar-thumb {
+    background: rgb(203, 213, 225);
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  select::-webkit-scrollbar-thumb:hover {
+    background: rgb(148, 163, 184);
+    background-clip: padding-box;
+  }
+
+  .dark select::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .dark select::-webkit-scrollbar-thumb {
+    background: rgb(71, 85, 105);
+    background-clip: padding-box;
+  }
+
+  .dark select::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 116, 139);
+    background-clip: padding-box;
+  }
+}
