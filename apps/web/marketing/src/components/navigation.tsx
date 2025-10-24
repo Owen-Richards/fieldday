@@ -84,7 +84,7 @@ export function Navigation() {
                 <span>Solutions</span>
                 <ChevronDown className="h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
               </button>
-              
+
               {/* Enhanced Dropdown with warm styling */}
               <div className="absolute left-0 mt-3 w-80 origin-top-left opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
                 <div className="rounded-2xl bg-white p-2 shadow-2xl ring-1 ring-brand-sand-200 dark:bg-neutral-800 dark:ring-neutral-700">
@@ -105,7 +105,7 @@ export function Navigation() {
                       </div>
                     </Link>
                   ))}
-                  
+
                   {/* CTA in dropdown */}
                   <div className="mt-2 pt-2 border-t border-brand-sand-200 dark:border-neutral-700">
                     <Link
@@ -153,11 +153,7 @@ export function Navigation() {
                 className="p-2.5 rounded-xl hover:bg-brand-sand-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300 transition-colors"
                 aria-label="Toggle theme"
               >
-                {theme === 'dark' ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
+                {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
             )}
 
@@ -217,9 +213,9 @@ export function Navigation() {
                     </div>
                   </Link>
                 ))}
-                
+
                 <div className="my-3 border-t border-brand-sand-200 dark:border-neutral-800" />
-                
+
                 {/* Company links */}
                 <div className="px-3 py-2 text-xs font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide">
                   Company
@@ -233,7 +229,7 @@ export function Navigation() {
                     {item.name}
                   </Link>
                 ))}
-                
+
                 {/* Mobile CTAs - Warm styling */}
                 <div className="mt-4 space-y-2 px-3">
                   <Link
