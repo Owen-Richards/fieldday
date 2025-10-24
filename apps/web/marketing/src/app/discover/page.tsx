@@ -5,7 +5,7 @@ import { MapPin, Calendar, Dumbbell } from 'lucide-react';
 import { SessionCard, type Session } from '@/components/session-card';
 import { FilterSelect } from '@/components/custom-select';
 
-// Mock data for demonstration
+// Mock data for demonstration - Photography-first design
 const mockSessions: Session[] = [
   {
     id: '1',
@@ -20,8 +20,13 @@ const mockSessions: Session[] = [
     registered: 17,
     price: 15,
     skillLevel: '5-7',
+    organizerName: 'Marcus Chen',
+    organizerPhoto:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
     organizerReliability: 95,
-    imageUrl: 'https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&q=80',
+    imageUrl:
+      'https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=600&fit=crop&q=80',
+    vibe: 'Competitive',
   },
   {
     id: '2',
@@ -36,7 +41,12 @@ const mockSessions: Session[] = [
     registered: 8,
     price: 10,
     skillLevel: '6-8',
+    organizerName: 'Jamal Thompson',
+    organizerPhoto:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop',
     organizerReliability: 88,
+    imageUrl: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&h=600&fit=crop&q=80',
+    vibe: 'Casual',
   },
   {
     id: '3',
@@ -51,8 +61,13 @@ const mockSessions: Session[] = [
     registered: 5,
     price: 20,
     skillLevel: '1-3',
+    organizerName: 'Sarah Kim',
+    organizerPhoto:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
     organizerReliability: 92,
-    imageUrl: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80',
+    imageUrl:
+      'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&h=600&fit=crop&q=80',
+    vibe: 'Social',
   },
   {
     id: '4',
@@ -67,7 +82,10 @@ const mockSessions: Session[] = [
     registered: 8,
     price: 25,
     skillLevel: '4-6',
+    organizerName: 'David Martinez',
     organizerReliability: 78,
+    imageUrl: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&h=600&fit=crop&q=80',
+    vibe: 'Social',
   },
   {
     id: '5',
@@ -81,7 +99,12 @@ const mockSessions: Session[] = [
     capacity: 15,
     registered: 10,
     price: 12,
+    organizerName: 'Emma Rodriguez',
+    organizerPhoto:
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop',
     organizerReliability: 97,
+    imageUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop&q=80',
+    vibe: 'Relaxed',
   },
   {
     id: '6',
@@ -96,7 +119,13 @@ const mockSessions: Session[] = [
     registered: 9,
     price: 18,
     skillLevel: '7-9',
+    organizerName: 'Alex Johnson',
+    organizerPhoto:
+      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop',
     organizerReliability: 91,
+    imageUrl:
+      'https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?w=800&h=600&fit=crop&q=80',
+    vibe: 'Competitive',
   },
 ];
 
